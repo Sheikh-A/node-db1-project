@@ -105,7 +105,7 @@ router.get("/:id", (req, res) => {
     const { id } = req.params;
     db.select("*")
     .from("accounts")
-    .where({ id });
+    .where({ id })
     .first()
     .then( data => {
         if(data) {
